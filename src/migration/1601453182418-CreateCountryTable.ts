@@ -22,10 +22,10 @@ export class CreateCountryTable1601453182418 implements MigrationInterface {
           type: 'text'
         }
       ]
-    }))
+    }));
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('country')
+    await queryRunner.dropTable('country');
   }
 }
