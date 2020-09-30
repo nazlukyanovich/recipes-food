@@ -14,7 +14,10 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: install
-      run: npm ci
+      run: |
+        npm ci
+        dokcer-compose up -d --build
+        typeorm migration:run
 
     - name: test
       run: |
