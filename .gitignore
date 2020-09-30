@@ -4,8 +4,7 @@
 /public/dist/*.js
 
 # secrets
-.env
-ormconfig.json
+
 
 # Logs
 logs

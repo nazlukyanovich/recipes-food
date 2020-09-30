@@ -15,7 +15,7 @@ jobs:
 
     - name: install
       run: npm ci
-      
+
     - name: up docker
       run: docker-compose up -d
 
