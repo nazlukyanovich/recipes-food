@@ -25,7 +25,7 @@ jobs:
       run: npm run build
 
     - name: migrations
-      run: typeorm migration:run
+      run: npm run migration
 
     - name: test
       run: |
