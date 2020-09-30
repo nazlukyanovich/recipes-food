@@ -5,6 +5,7 @@
 
 # secrets
 .env
+ormconfig.json
 
 # Logs
 logs
