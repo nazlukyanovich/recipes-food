@@ -1,0 +1,36 @@
+.header-container {
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-button-container {
+    display: flex;
+    margin-right: 50px;
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-button span {
+    height: 18px;
+}
+
+.header-button a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-family: Catamaran, sans-serif;
+    color: #fff;
+}
+
+.header-button a:hover {
+    text-decoration: underline;
+}
