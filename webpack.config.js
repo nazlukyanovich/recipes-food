@@ -9,10 +9,14 @@ module.exports = {
         use: 'ts-loader',
         exclude: [/node_modules/, /src/, /dist/],
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
     ],
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: ['.tsx', '.ts', '.js', ".css"],
   },
   output: {
     filename: 'bundle.js',
