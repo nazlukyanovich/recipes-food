@@ -1,25 +1,21 @@
 import * as React from 'react';
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 import { BsBoxArrowInRight, BsFillPersonPlusFill } from 'react-icons/bs';
 
 export const Header: React.FunctionComponent = () => (
   <div className="header-container">
-    <div className="header-button-container">
-      <div className="header-button">
-        <span>
+    <nav className="header-nav-container">
+      <ul>
+        <NavLink className="nav-button" to="/signin">
           <BsBoxArrowInRight />
-        </span>
-        <a href="#">SIGN IN</a>
-        <span></span>
-      </div>
-      <div className="header-button">
-        <span>
+          <li>SIGN IN</li>
+        </NavLink>
+        <NavLink className="nav-button" to="/signup">
           <BsFillPersonPlusFill />
-        </span>
-        <span>
-          <a href="#">SIGN UP</a>
-        </span>
-      </div>
-    </div>
+          <li>SIGN UP</li>
+        </NavLink>
+      </ul>
+    </nav>
   </div>
 );
