@@ -1,14 +1,14 @@
 import * as React from 'react';
 import './Header.css';
 import { NavLink } from 'react-router-dom';
-import { BsBoxArrowInRight, BsFillPersonPlusFill } from 'react-icons/bs';
+import { BsFillPersonCheckFill, BsFillPersonPlusFill } from 'react-icons/bs';
 
 export const Header: React.FunctionComponent = () => (
   <div className="header-container">
     <nav className="header-nav-container">
       <ul>
         <NavLink className="nav-button" to="/signin">
-          <BsBoxArrowInRight />
+          <BsFillPersonCheckFill />
           <li>SIGN IN</li>
         </NavLink>
         <NavLink className="nav-button" to="/signup">

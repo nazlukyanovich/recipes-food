@@ -12,14 +12,14 @@ export const App: React.FunctionComponent = () => (
         exact
         path="/signin"
         render={(props: RouteComponentProps) => (
-          <Authentication {...props} operation="signin" />
+          <Authentication {...props} operation="Sign In" />
         )}
       />
       <Route
         exact
         path="/signup"
         render={(props: RouteComponentProps) => (
-          <Authentication {...props} operation="signup" />
+          <Authentication {...props} operation="Sign Up" />
         )}
       />
     </Switch>
