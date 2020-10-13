@@ -3,7 +3,7 @@ import './app.css';
 import { HomePage } from './HomePage/HomePage';
 import { Footer } from './Footer/Footer';
 export const App: React.FunctionComponent = () => (
-  <div className="container">
+  <div className="app-container">
     <HomePage />
     <Footer />
   </div>
