@@ -1,7 +1,10 @@
 import * as React from 'react';
-
+import './app.css';
+import { HomePage } from './HomePage/HomePage';
+import { Footer } from './Footer/Footer';
 export const App: React.FunctionComponent = () => (
-  <div>
-    <h1 className="red">Nest JS + React = LOVE</h1>
+  <div className="container">
+    <HomePage />
+    <Footer />
   </div>
 );
