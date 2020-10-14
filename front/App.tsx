@@ -4,6 +4,8 @@ import { Route, Switch, RouteComponentProps } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { Authentication } from './Header/Authentication/Authentication';
 import { Filter } from './Filter/Filter';
+import { HomePage } from './HomePage/HomePage';
+import { Footer } from './Footer/Footer';
 
 export const App: React.FunctionComponent = () => (
   <div className="app-container">
@@ -24,8 +26,10 @@ export const App: React.FunctionComponent = () => (
         )}
       />
     </Switch>
-    <div className="body-container">
-      <Filter></Filter>
-    </div>
+    <HomePage />
+    {/* <div className="body-container">
+      <Filter/>
+    </div> */}
+    <Footer />
   </div>
 );
