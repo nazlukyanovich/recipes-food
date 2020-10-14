@@ -1,16 +1,17 @@
 body {
-  margin: 0px;
-  font-family: Catamaran, sans-serif;
+    margin: 0px;
+    font-family: Catamaran, sans-serif;
 }
 
 .app-container {
-  /* height: 100%; */
-  width: 100vw;
-  height: 100vh;
+    height: 100%;
 }
 
 .body-container {
-  width: 80%;
-  height: 100%;
-  margin: auto;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
