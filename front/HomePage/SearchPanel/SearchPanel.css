@@ -1,0 +1,85 @@
+.SearchPanel {
+  width: 100%;
+  height: 10%;
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+  border-right: none;
+}
+
+.SearchPanel_wrapper {
+  width: 80%;
+  height: 85%;
+  background-color: white;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 5px;
+}
+
+.SearchPanel_wrapper form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.SearchPanel_searchInput {
+  width: 80%;
+  height: 65%;
+  border: 5px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SearchPanel_searchInput input {
+  width: 99%;
+  height: 98%;
+  border: none;
+  font-size: 1vw;
+}
+.SearchPanel_searchInput input:focus {
+  outline: none;
+}
+
+.SearchPanel_buttonGroup {
+  width: 17%;
+  height: 70%;
+  /* background-color: black; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 1%;
+}
+
+.SearchPanel_buttonGroup button:first-child {
+  width: 23%;
+}
+.SearchPanel_buttonGroup button {
+  width: 70%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(1);
+  font-size: 0.8vw;
+}
+
+.SearchPanel_buttonGroup button:active {
+  transition: all 0.2s;
+  transform: scale(0.98);
+}
+
+.SearchPanel_buttonGroup button:active > svg {
+  transform: scale(0.98);
+}
+
+.SearchPanel_buttonGroup button:focus {
+  outline: none;
+}

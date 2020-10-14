@@ -1,0 +1,39 @@
+.footer {
+  width: 100vw;
+  height: 4vh;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  margin: 0 6%;
+  font-size: 1.1vw;
+}
+.footer_social-wrapper {
+  width: 20%;
+  height: 64%;
+  border: 1px solid white;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+}
+
+.footer_social-wrapper_twitter {
+  color: royalblue;
+}
+.footer_social-wrapper_instagram {
+  color: maroon;
+}
+.footer_social-wrapper_facebook {
+  color: blue;
+}
+.footer_social-wrapper_telegram {
+  color: cornflowerblue;
+}
