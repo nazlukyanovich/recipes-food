@@ -3,7 +3,6 @@ import './App.css';
 import { Route, Switch, RouteComponentProps } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { Authentication } from './Header/Authentication/Authentication';
-import { Filter } from './Filter/Filter';
 import { HomePage } from './HomePage/HomePage';
 import { Footer } from './Footer/Footer';
 
@@ -26,10 +25,9 @@ export const App: React.FunctionComponent = () => (
         )}
       />
     </Switch>
-    <HomePage />
-    {/* <div className="body-container">
-      <Filter/>
-    </div> */}
-    <Footer />
+    <div className="body-container">
+      <HomePage />
+    </div>
+    {/* <Footer /> */}
   </div>
 );
