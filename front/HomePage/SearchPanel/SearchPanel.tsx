@@ -5,6 +5,7 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import './SearchPanel.css';
 import { CgSearch } from 'react-icons/cg';
+import { Link } from 'react-router-dom';
 export const SearchPanel: React.FunctionComponent = () => {
   const [valueInput, setValueInput] = React.useState(null);
   const ingredientsData = [
@@ -46,7 +47,7 @@ export const SearchPanel: React.FunctionComponent = () => {
             />
           </div>
           <div className="SearchPanel_buttonGroup">
-            <button>
+            <button onClick={e => e.preventDefault}>
               <CgSearch />
             </button>
             <button>Get random dishes</button>

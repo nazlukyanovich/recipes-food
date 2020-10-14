@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './app.css';
 import './App.css';
 import { Route, Switch, RouteComponentProps } from 'react-router-dom';
 import { Header } from './Header/Header';
@@ -28,9 +27,9 @@ export const App: React.FunctionComponent = () => (
       />
     </Switch>
     <HomePage />
-    <div className="body-container">
-      <Filter></Filter>
-    </div>
+    {/* <div className="body-container">
+      <Filter/>
+    </div> */}
     <Footer />
   </div>
 );

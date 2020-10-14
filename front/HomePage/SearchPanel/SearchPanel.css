@@ -83,3 +83,8 @@
 .SearchPanel_buttonGroup button:focus {
   outline: none;
 }
+
+.SearchPanel_searchInput > div {
+  width: 99%;
+  height: 98%;
+}
