@@ -1,0 +1,10 @@
+language: node_js
+
+install:
+    - docker-compose up -d
+    - npm install
+    - npm run start
+    - npm run migration
+
+node_js:
+  - "12.18.3"
