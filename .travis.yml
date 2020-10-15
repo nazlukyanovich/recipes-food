@@ -3,7 +3,7 @@ language: node_js
 install:
     - docker-compose up -d
     - npm install
-    - npm build:front
+    - webpack --mode production
     - npm run migration
     - npm run start
 
