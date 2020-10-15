@@ -1,5 +1,5 @@
 .TopRecipes {
-  width: 80%;
+  width: 76%;
   height: 60%;
   position: relative;
   display: flex;
@@ -16,8 +16,8 @@
 }
 
 .TopRecipes_wrapper {
-  width: 90%;
-  height: 95%;
+  width: 100%;
+  height: 90%;
   background-color: white;
   display: flex;
   justify-content: flex-start;
