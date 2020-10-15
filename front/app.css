@@ -1,6 +1,6 @@
 body {
-  margin: 0px;
-  font-family: Catamaran, sans-serif;
+    margin: 0px;
+    font-family: Catamaran, sans-serif;
 }
 
 .app-container {
@@ -8,7 +8,10 @@ body {
 }
 
 .body-container {
-  width: 80%;
-  height: 100%;
-  margin: auto;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
