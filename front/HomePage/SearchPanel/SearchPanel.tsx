@@ -3,6 +3,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 import './SearchPanel.css';
 import { CgSearch } from 'react-icons/cg';
+import { Link } from 'react-router-dom';
 export const SearchPanel: React.FunctionComponent = () => {
   const [valueInput, setValueInput] = React.useState(null);
   const ingredientsData = [
@@ -20,7 +21,7 @@ export const SearchPanel: React.FunctionComponent = () => {
   return (
     <div className="SearchPanel">
       <div className="SearchPanel_wrapper">
-        <form>
+        <form onSubmit={e => e.preventDefault}>
           <div className="SearchPanel_searchInput">
             {/* <Autocomplete
               multiple
@@ -54,9 +55,11 @@ export const SearchPanel: React.FunctionComponent = () => {
             />
           </div>
           <div className="SearchPanel_buttonGroup">
-            <button onClick={e => e.preventDefault}>
-              <CgSearch />
-            </button>
+            <Link to="/searchResults">
+              <button onClick={e => e.preventDefault}>
+                <CgSearch />
+              </button>
+            </Link>
             <button>Get random dishes</button>
           </div>
         </form>
