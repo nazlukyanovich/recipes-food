@@ -1,7 +1,7 @@
 .SearchPanel {
   width: 95%;
   height: 10%;
-  border: 5px solid black;
+  /* border: 5px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +56,9 @@
 }
 
 .SearchPanel_buttonGroup button:first-child {
+  width: 100%;
+}
+.SearchPanel_buttonGroup a {
   width: 23%;
 }
 .SearchPanel_buttonGroup button {
