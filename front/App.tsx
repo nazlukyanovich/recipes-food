@@ -28,7 +28,7 @@ export const App: React.FunctionComponent = () => (
     </Switch>
     <div className="body-container">
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route path="/(|signin|signup)" component={HomePage} />
         <Route path="/searchResults" component={ResultsPage} />
       </Switch>
     </div>
