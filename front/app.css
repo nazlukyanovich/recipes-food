@@ -9,6 +9,7 @@ body {
 
 .body-container {
   width: 100%;
+  min-height: 92vh;
   margin: auto;
   display: flex;
   align-items: center;
