@@ -21,6 +21,7 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
     'operator-linebreak': ['error', 'before'],
     'linebreak-style': 'off',
     'indent': [
@@ -41,6 +42,9 @@ module.exports = {
         'flatTernaryExpressions': false
       }
     ],
-    'object-curly-spacing': ['error', 'always']
+    'object-curly-spacing': ['error', 'always'],
+    'no-unused-vars': 'off',
+    'require-jsdoc': 'off',
+    'new-cap': 'off'
   },
 };

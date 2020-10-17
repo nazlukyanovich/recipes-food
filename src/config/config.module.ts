@@ -17,11 +17,11 @@ config();
       database: process.env.POSTGRES_DB,
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
-      migrations: ["dist/migration/*.js"],
+      migrations: ['dist/migration/*.js'],
       cli: {
-        "migrationsDir": "src/migration",
-        "entitiesDir": "src"
-      }
+        migrationsDir: 'src/migration',
+        entitiesDir: 'src',
+      },
     }),
   ],
 })
