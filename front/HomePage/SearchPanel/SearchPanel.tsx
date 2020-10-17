@@ -26,10 +26,10 @@ export const SearchPanel: React.FunctionComponent = () => {
             {/* <Autocomplete
               multiple
               id="auto-complete"
-             
+
               options={ingredientsData}
               getOptionLabel={option => option.type}
-             
+
               renderInput={params => (
                 <div ref={params.InputProps.ref}>
                   <input
@@ -41,7 +41,7 @@ export const SearchPanel: React.FunctionComponent = () => {
                   />
                 </div>
               )}
-            /> 
+            />
         */}
             <Autocomplete
               multiple
