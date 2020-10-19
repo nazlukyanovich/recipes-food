@@ -17,6 +17,7 @@ module.exports = {
     node: true,
     jest: true,
   },
+  ignorePatterns: ['dist/*'],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -45,6 +46,7 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'no-unused-vars': 'off',
     'require-jsdoc': 'off',
-    'new-cap': 'off'
+    'new-cap': 'off',
+    'max-len': 'off'
   },
 };
