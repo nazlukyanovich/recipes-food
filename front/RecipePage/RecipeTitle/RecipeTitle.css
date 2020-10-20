@@ -16,6 +16,9 @@
 .RecipeTitle {
     font-size: x-large;
 }
+.RecipeTitle:active {
+    transform: translateY(2px);
+}
 
 .Title-buttons {
     display: flex;
@@ -33,6 +36,10 @@
     font-size: large;
     border: none;
     background: none;
+    cursor: pointer;
+}
+.Buttons:active {
+    transform: translateY(2px);
 }
 
 .SearchIcon {
@@ -40,13 +47,13 @@
     font-size: small;
     height: 40px;
     width: 40px;
+    border-radius: 0px;
 }
 .SearchIcon:hover {
-    background-color: #f9c64fa2;
-}
-
-.down{
-    transform: translateY(3px);
+    border-radius: 0px;
+    background: #f9c74f;
+    box-shadow:  4px 4px 14px #645020, 
+                -4px -4px 14px #ffff7e;    
 }
 
 .search-input {

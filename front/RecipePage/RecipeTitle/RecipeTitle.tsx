@@ -8,11 +8,7 @@ export const RecipeTitle: React.FC = () => (
   <div className="RecipeTitle-container">
     <div className="first-panel">
       <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
-        <div
-          className="RecipeTitle"
-          onMouseDown={titleAnimation}
-          onMouseUp={ppp}
-        >
+        <div className="RecipeTitle">
           <h1>RecipeFinder</h1>
         </div>
       </Link>
@@ -33,9 +29,3 @@ export const RecipeTitle: React.FC = () => (
   </div>
 );
 
-const titleAnimation = () => {
-  document.querySelector('.RecipeTitle').classList.add('down');
-};
-const ppp = () => {
-  document.querySelector('.RecipeTitle').classList.remove('down');
-};

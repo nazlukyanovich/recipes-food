@@ -7,7 +7,7 @@ config();
 @Module({
   providers: [ConfigService],
   exports: [ConfigService],
-  //imports: [
+  // imports: [
   //  TypeOrmModule.forRoot({
   //    type: 'postgres',
   //    host: process.env.HOST,
@@ -23,6 +23,6 @@ config();
   //      "entitiesDir": "src"
   //    }
   //  }),
-  //],
+  // ],
 })
 export class ConfigModule {}

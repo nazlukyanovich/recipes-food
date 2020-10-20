@@ -1,7 +1,6 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export class CreateCountryTable1601453182418 implements MigrationInterface {
-
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(new Table({
       name: 'country',
@@ -15,17 +14,17 @@ export class CreateCountryTable1601453182418 implements MigrationInterface {
           name: 'name',
           type: 'text',
           isUnique: true,
-          isNullable: false
+          isNullable: false,
         },
         {
           name: 'description',
-          type: 'text'
-        }
-      ]
-    }))
+          type: 'text',
+        },
+      ],
+    }));
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('country')
+    await queryRunner.dropTable('country');
   }
 }
