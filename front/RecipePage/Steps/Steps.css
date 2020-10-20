@@ -1,0 +1,67 @@
+.Steps-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-left: 7em;
+    padding-right: 7em;
+    width: 100vw;
+    height: 100vh;
+    background-color: seashell;
+}
+
+.Name-and-image {
+    width: 70%;
+    margin-right: 2em;
+}
+
+.Name-of-recipe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: x-large;
+}
+.TimeIcon {
+    margin-left: 1em;
+}
+
+.Recipe-ingredients {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-top: 4em;
+    font-size: x-large;
+}
+
+.List-of-ingredients {
+    line-height: 2em;
+}
+
+.Recipe-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: larger;
+}
+
+.images {
+    width: 50%;
+    height: 50%;
+}
+
+.Recipe-steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.Steps {
+    margin: auto;
+}
+
+.List-of-steps {
+    font-size: larger;
+    margin: 2em;
+}

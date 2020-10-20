@@ -6,6 +6,7 @@ import { Authentication } from './Header/Authentication/Authentication';
 import { HomePage } from './HomePage/HomePage';
 import { Footer } from './Footer/Footer';
 import { ResultsPage } from './ResultsPage/ResultsPage';
+import { RecipePage } from './RecipePage/RecipePage';
 
 export const App: React.FunctionComponent = () => (
   <div className="app-container">
@@ -30,6 +31,7 @@ export const App: React.FunctionComponent = () => (
       <Switch>
         <Route path="/(|signin|signup)" component={HomePage} />
         <Route path="/searchResults" component={ResultsPage} />
+        <Route path="/recipePage" component={RecipePage} />
       </Switch>
     </div>
     <Footer />

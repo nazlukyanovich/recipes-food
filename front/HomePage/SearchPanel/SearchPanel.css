@@ -58,7 +58,7 @@
 .SearchPanel_buttonGroup button:first-child {
   width: 100%;
 }
-.SearchPanel_buttonGroup a {
+.SearchPanel_buttonGroup a:first-child {
   width: 23%;
 }
 .SearchPanel_buttonGroup button {

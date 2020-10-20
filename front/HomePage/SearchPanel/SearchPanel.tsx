@@ -60,7 +60,9 @@ export const SearchPanel: React.FunctionComponent = () => {
                 <CgSearch />
               </button>
             </Link>
-            <button>Get random dishes</button>
+            <Link to="/recipePage">
+              <button>Get random dishes</button>
+            </Link>
           </div>
         </form>
       </div>
