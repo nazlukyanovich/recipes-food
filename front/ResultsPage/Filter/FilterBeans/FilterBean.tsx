@@ -1,22 +1,20 @@
 /* eslint-disable require-jsdoc */
 import * as React from 'react';
+import { store } from './../../../store/store';
 import './FilterBean.css';
 
 class FilterBean extends React.Component<
   { name: string },
   { selected: boolean }
 > {
-  state = {
-    selected: false,
-  };
-
   constructor(props: Readonly<{ name: string }>) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(): void {
-    this.setState({ selected: !this.state.selected });
+    store.addSelectedFilterBean(this.props.name);
+    // console.log(store.getSelectedFilterBeans());
   }
 
   render(): any {
