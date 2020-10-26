@@ -6,8 +6,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.css';
 
 export const Carousel: React.FunctionComponent = () => {
-  let settings = {
-    dots: false,
+  const settings = {
+    dots: true,
     infinite: true,
     speed: 800,
     slidesToShow: 4,
