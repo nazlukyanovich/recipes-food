@@ -56,6 +56,7 @@ export const AutocompleteSearch: React.FunctionComponent = () => {
   const [inputValue, setInputValue] = React.useState('');
   const [colorIndex, setColorIndex] = React.useState([]);
   const [open, setOpen] = React.useState(false);
+  const maxAvailableTag = 20;
   const getRandomUniqIndex = (
     indexRange: number,
     indexStore: number[],
@@ -80,7 +81,7 @@ export const AutocompleteSearch: React.FunctionComponent = () => {
       open={open}
       inputValue={inputValue}
       onOpen={() => {
-        value.length == 20 ? setOpen(false) : setOpen(true);
+        value.length == maxAvailableTag ? setOpen(false) : setOpen(true);
       }}
       onClose={() => setOpen(false)}
       filterSelectedOptions
@@ -88,14 +89,30 @@ export const AutocompleteSearch: React.FunctionComponent = () => {
       getOptionSelected={(option, value) => option.type === value.type}
       getOptionLabel={option => option.type}
       onChange={(_, newValue: object[] | null, reason: string) => {
-        let randomColor = colors[getRandomUniqIndex(colors.length, colorIndex)];
-        let addColorElement = newValue.map((e, i) => {
-          if (i == newValue.length - 1 && reason !== 'remove-option') {
-            return { ...e, color: randomColor };
-          }
-          return e;
-        });
-        setValue(addColorElement);
+        switch (reason) {
+          case 'clear':
+            setColorIndex([]);
+            setValue([]);
+            break;
+          case 'remove-option':
+            let updateColorIndex = colorIndex.filter(
+              (e, i) => i != colorIndex.length - 1,
+            );
+            let updateValue = value.filter((e, i) => i != value.length - 1);
+            setColorIndex(updateColorIndex);
+            setValue(updateValue);
+            break;
+          default:
+            let randomColor =
+              colors[getRandomUniqIndex(colors.length, colorIndex)];
+            let addColorElement = newValue.map((e, i) => {
+              if (i == newValue.length - 1 && reason !== 'remove-option') {
+                return { ...e, color: randomColor };
+              }
+              return e;
+            });
+            setValue(addColorElement);
+        }
       }}
       onInputChange={(_, newInputValue: string) => {
         setInputValue(newInputValue);
@@ -108,6 +125,12 @@ export const AutocompleteSearch: React.FunctionComponent = () => {
               {...getTagProps({ index })}
               style={{ background: `${option.color}`, transition: 'none' }}
               label={option.type}
+              onDelete={() => {
+                setValue(value.filter(e => e.type !== option.type));
+                setColorIndex(
+                  colorIndex.filter(e => e !== colors.indexOf(option.color)),
+                );
+              }}
             />
           );
         });
