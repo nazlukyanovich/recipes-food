@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Chip from '@material-ui/core/Chip';
 
-const ingredientsData = [
+let ingredientsData: object[] = [
   { type: 'apple' },
   { type: 'tomato' },
   { type: 'pepper' },
@@ -20,9 +20,16 @@ const ingredientsData = [
   { type: 'radish' },
   { type: 'celery' },
   { type: 'garlic' },
+  { type: 'pumpkins' },
+  { type: 'turnipss' },
+  { type: 'cabbages' },
+  { type: 'cucumbers' },
+  { type: 'radishs' },
+  { type: 'celerys' },
+  { type: 'garlics' },
 ];
-let colors = [
-  'red',
+
+let colors: string[] = [
   'green',
   'blue',
   'crimson',
@@ -36,40 +43,73 @@ let colors = [
   'violet',
   'aqua',
   'SpringGreen',
+  'cadetblue',
+  'darkslateblue',
+  'greenyellow',
+  'tomato',
+  'slateblue',
+  'skyblue',
 ];
-
-const MyChip = props => {
-  console.log(props);
-  const [color, setColor] = React.useState(null);
-  React.useEffect(() => {
-    setColor(colors[Math.floor(Math.random() * colors.length - 1)]);
-  }, []);
-
-  return <Chip style={{ background: `${color}` }} {...props} />;
-};
 
 export const AutocompleteSearch: React.FunctionComponent = () => {
   const [value, setValue] = React.useState([]);
   const [inputValue, setInputValue] = React.useState('');
+  const [colorIndex, setColorIndex] = React.useState([]);
+  const [open, setOpen] = React.useState(false);
+  const getRandomUniqIndex = (
+    indexRange: number,
+    indexStore: number[],
+  ): number => {
+    while (true) {
+      let randomIndex = Math.floor(Math.random() * indexRange);
+      if (!indexStore.includes(randomIndex)) {
+        setColorIndex([...indexStore, randomIndex]);
+      } else if (indexStore.length == indexRange) {
+        setColorIndex([randomIndex]);
+      } else {
+        continue;
+      }
+      return randomIndex;
+    }
+  };
   return (
     <Autocomplete
+      id="autocomplete"
       multiple
       value={value}
-      onChange={(event: any, newValue: string[] | null) => {
-        setValue(newValue);
-      }}
+      open={open}
       inputValue={inputValue}
-      onInputChange={(event, newInputValue) => {
+      onOpen={() => {
+        value.length == 20 ? setOpen(false) : setOpen(true);
+      }}
+      onClose={() => setOpen(false)}
+      filterSelectedOptions
+      options={ingredientsData}
+      getOptionSelected={(option, value) => option.type === value.type}
+      getOptionLabel={option => option.type}
+      onChange={(_, newValue: object[] | null, reason: string) => {
+        let randomColor = colors[getRandomUniqIndex(colors.length, colorIndex)];
+        let addColorElement = newValue.map((e, i) => {
+          if (i == newValue.length - 1 && reason !== 'remove-option') {
+            return { ...e, color: randomColor };
+          }
+          return e;
+        });
+        setValue(addColorElement);
+      }}
+      onInputChange={(_, newInputValue: string) => {
         setInputValue(newInputValue);
       }}
-      getOptionLabel={option => option.type}
-      filterSelectedOptions
-      id="autocomplete"
-      options={ingredientsData}
       renderInput={params => <TextField {...params} variant="outlined" />}
       renderTags={(tagValue, getTagProps) => {
         return tagValue.map((option, index) => {
-          return <MyChip {...getTagProps({ index })} label={option.type} />;
+          return (
+            <Chip
+              {...getTagProps({ index })}
+              style={{ background: `${option.color}`, transition: 'none' }}
+              label={option.type}
+            />
+          );
         });
       }}
     />
