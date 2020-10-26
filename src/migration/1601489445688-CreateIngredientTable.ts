@@ -1,10 +1,10 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class CreateCountryTable1601453182418 implements MigrationInterface {
+export class CreateIngredientTable1601489445688 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'country',
+        name: 'ingredient',
         columns: [
           {
             name: 'id',
@@ -13,20 +13,25 @@ export class CreateCountryTable1601453182418 implements MigrationInterface {
           },
           {
             name: 'name',
-            type: 'text',
+            type: 'varchar(64)',
             isUnique: true,
             isNullable: false,
-          },
-          {
-            name: 'description',
-            type: 'text',
           },
         ],
       }),
     );
+
+    await queryRunner.query(
+      "CREATE TYPE e_ingredient_type AS ENUM ('meat', 'vegetable', 'fruit', 'spice')",
+    );
+
+    await queryRunner.query(
+      'ALTER TABLE ingredient ADD COLUMN type e_ingredient_type',
+    );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('country');
+    await queryRunner.dropTable('ingredient');
+    await queryRunner.query('DROP TYPE e_ingredient_type');
   }
 }

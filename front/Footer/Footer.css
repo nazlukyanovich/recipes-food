@@ -1,5 +1,5 @@
 .footer {
-  height: 4vh;
+  height: 40px;
   background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
@@ -8,10 +8,10 @@
 
 .footer a {
   margin: 0 6%;
-  font-size: 1.1vw;
 }
 .footer_social-wrapper {
   width: 20%;
+  min-width: 200px;
   height: 64%;
   border: 1px solid white;
   display: -webkit-box;
