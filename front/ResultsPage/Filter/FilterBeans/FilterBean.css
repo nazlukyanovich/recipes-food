@@ -5,6 +5,7 @@
     border-radius: 10rem;
     font-family: Catamaran, sans-serif;
     font-size: 14px;
+    background-color: #d3d3d3;
     user-select: none;
 }
 
@@ -13,5 +14,5 @@
 }
 
 .filter-button:hover {
-    background-color: #9fa7b1;
+    background-color: #808080;
 }
