@@ -4,7 +4,8 @@
 /public/dist/*.js
 
 # secrets
-
+.env
+.evn.local
 
 # Logs
 logs

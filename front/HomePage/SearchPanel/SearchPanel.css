@@ -11,10 +11,10 @@
 
 .SearchPanel_wrapper {
   width: 80%;
-  height: 85%;
   background-color: white;
   box-shadow: 0px 0px 10px black;
   border-radius: 5px;
+  padding: 4px 0;
 }
 
 .SearchPanel_wrapper form {
@@ -29,11 +29,12 @@
 .SearchPanel_searchInput {
   width: 80%;
   height: 65%;
-  border: 5px solid black;
-  border-radius: 10px;
+  /* border: 5px solid black;
+  border-radius: 10px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s;
 }
 .SearchPanel_searchInput input {
   width: 99%;
@@ -47,7 +48,7 @@
 
 .SearchPanel_buttonGroup {
   width: 17%;
-  height: 70%;
+  height: 55%;
   /* background-color: black; */
   display: flex;
   justify-content: space-around;
@@ -89,5 +90,4 @@
 
 .SearchPanel_searchInput > div {
   width: 99%;
-  height: 98%;
 }
